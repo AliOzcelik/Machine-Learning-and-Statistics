@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from time import time
 
-train_set = pd.read_csv('/Users/desidero/Desktop/Dersler/IE460/assignment 3/train_set.csv')
-test_set = pd.read_csv('/Users/desidero/Desktop/Dersler/IE460/assignment 3/test_set.csv')
+train_set = pd.read_csv('train_set.csv')
+test_set = pd.read_csv('test_set.csv')
 
 
 class RadiusKNN:
