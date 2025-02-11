@@ -5,8 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from time import time
 
-train_set = pd.read_csv('/Users/desidero/Desktop/Dersler/IE460/assignment 3/train_set.csv')
-test_set = pd.read_csv('/Users/desidero/Desktop/Dersler/IE460/assignment 3/test_set.csv')
+train_set = pd.read_csv('train_set.csv')
+test_set = pd.read_csv('test_set.csv')
 
 class FKNN:
     
@@ -34,7 +34,7 @@ class FKNN:
             d = closest_distances[j]
             # in the training set, the closest point is still itself, so distance is zero
             # when turning d = 1/d, it gets zero division error
-            # so in the closest distance case i assign it the highes weight
+            # so in the closest distance case i assign it the highest weight
             if d == 0: 
                 ali += mu[:, j]
                 ali2 += 0.01
