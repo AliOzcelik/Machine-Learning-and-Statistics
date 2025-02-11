@@ -58,7 +58,7 @@ class KNN:
         
     def distance(self, vector1, vector2):
         dist = np.linalg.norm(vector1 - vector2)
-        return dist ** 2
+        return dist
     
     # counts only 1s 
     def count(self, label_list):
