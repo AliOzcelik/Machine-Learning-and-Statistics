@@ -8,14 +8,14 @@ import math
 from time import time
 
 
-train_set2 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_2.csv").iloc[:, 1:]
-test_set2 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_2.csv").iloc[:, 1:]
+train_set2 = pd.read_csv("train_set_2.csv").iloc[:, 1:]
+test_set2 = pd.read_csv("train_set_2.csv").iloc[:, 1:]
 
-train_set3 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_3.csv").iloc[:, 1:]
-test_set3 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_3.csv").iloc[:, 1:]
+train_set3 = pd.read_csv("train_set_3.csv").iloc[:, 1:]
+test_set3 = pd.read_csv("train_set_3.csv").iloc[:, 1:]
 
-train_set4 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_4.csv").iloc[:, 1:]
-test_set4 = pd.read_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_4.csv").iloc[:, 1:]
+train_set4 = pd.read_csv("train_set_4.csv").iloc[:, 1:]
+test_set4 = pd.read_csv("train_set_4.csv").iloc[:, 1:]
 
 
 
@@ -145,7 +145,7 @@ print("Error rate for 4 bins: ", (1-accuracy)*100)
 
 from sklearn.decomposition import PCA 
 
-dataset = pd.read_excel("/Users/desidero/Desktop/Dersler/IE460/assignment 2/Wisconsin Diagnostic Breast Cancer.xlsx")
+dataset = pd.read_excel("Wisconsin Diagnostic Breast Cancer.xlsx")
 
 pca = PCA(n_components=2)
 
