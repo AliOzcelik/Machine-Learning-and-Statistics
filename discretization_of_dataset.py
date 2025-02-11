@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import random
 import math
 
-dataset = pd.read_excel('/Users/desidero/Desktop/Dersler/IE460/assignment 2/Wisconsin Diagnostic Breast Cancer.xlsx')
+dataset = pd.read_excel('Wisconsin Diagnostic Breast Cancer.xlsx')
 columns = dataset.columns
 
 #num_bins = 4
@@ -151,12 +151,12 @@ train_set2, test_set2 = form_train_test(shuffled_data2, index=0.8)
 train_set3, test_set3 = form_train_test(shuffled_data3, index=0.8)
 train_set4, test_set4 = form_train_test(shuffled_data4, index=0.8)
 
-train_set2.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_2.csv")
-test_set2.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/test_set_2.csv")
+train_set2.to_csv("train_set_2.csv")
+test_set2.to_csv("test_set_2.csv")
 
-train_set3.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_3.csv")
-test_set3.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/test_set_3.csv")
+train_set3.to_csv("train_set_3.csv")
+test_set3.to_csv("test_set_3.csv")
 
-train_set4.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/train_set_4.csv")
-test_set4.to_csv("/Users/desidero/Desktop/Dersler/IE460/assignment 4/CA4_ID2306579_Part1A/test_set_4.csv")
+train_set4.to_csv("train_set_4.csv")
+test_set4.to_csv("test_set_4.csv")
 
