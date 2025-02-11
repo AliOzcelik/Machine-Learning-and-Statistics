@@ -7,7 +7,7 @@ import random
 from time import time
 
 
-data = pd.read_excel('/Users/desidero/Desktop/Dersler/IE460/assignment 2/Wisconsin Diagnostic Breast Cancer.xlsx')
+data = pd.read_excel('Wisconsin Diagnostic Breast Cancer.xlsx')
     
 def normalize(dataset):
     max_values = np.max(dataset, axis=0)
