@@ -58,35 +58,6 @@ class ModifiedKNN:
         min_distance = min(distances)
         weights = [(max_distance - x)/(max_distance -  min_distance) for x in distances]
         return weights
-
-    def closest_neighbours_with_weights(self, data_point, data_point_index):
-        distances = [self.distance(data_point, self.train_attributes[i, :]) for i in range(len(self.train_attributes))]
-        self.distances = distances
-        closest_distances = sorted(distances)[:self.k]
-        weights = self.assign_weights(closest_distances)
-        closest_indexes = [distances.index(i) for i in closest_distances]
-        return closest_indexes, weights
-
-    def predict(self, dataset, data_point_index): 
-        data_point = dataset[data_point_index, :]
-        closest_indexes, weights = self.closest_neighbours_with_weights(data_point, data_point_index)
-        closest_labels = [self.train_labels[i] for i in closest_indexes]
-        corresponding = {}
-        for i in closest_labels:
-            index = closest_labels.index(i)
-            if i not in corresponding.keys():
-                corresponding[i] = weights[index]
-            else:
-                corresponding[i] += weights[index]                
-        max_value = 0
-        max_label = None
-        for i in corresponding.keys():
-            if corresponding[i] > max_value:
-                max_label = i
-                max_value = corresponding[i]
-        self.corresponding = corresponding
-        return max_label
-    
     
     def predict(self, dataset, data_point_index): 
         data_point = dataset[data_point_index, :]
