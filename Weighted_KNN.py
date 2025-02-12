@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import random
 from time import time
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
 
 dataset = pd.read_excel('Wisconsin Diagnostic Breast Cancer.xlsx')
 
@@ -139,6 +137,5 @@ for k in range(1,21):
         
     test_accuracies.append(test_accuracy)
     train_accuracies.append(train_accuracy)
-    
     
     
